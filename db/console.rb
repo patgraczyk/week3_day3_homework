@@ -21,3 +21,6 @@ p Album.all()
 
 artist1.name = 'Moira Banks'
 artist1.update()
+
+album1.title = 'My best album'
+album1.update()

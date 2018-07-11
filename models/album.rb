@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-attr_accessor :id, :genre
+attr_accessor :id, :genre, :title
 
 
 def initialize(options)
@@ -36,5 +36,14 @@ def self.find(id)
   album = Album.new(albums.first)
   return album
 end
+
+def update()
+  sql = "UPDATE albums SET
+  title = $1
+  WHERE id = $2"
+  values = [@title, @id]
+  SqlRunner.run(sql, values)
+end
+
 
 end  #end of class
