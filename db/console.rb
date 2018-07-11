@@ -11,6 +11,8 @@ artist2.save()
 
 album1 = Album.new('title' => 'Wendy Sings', 'genre' => 'rock')
 album1.save()
+album2 = Album.new('title' => 'Moira Sings', 'genre' => 'swing')
+album2.save()
 
 p Artist.all()
 
