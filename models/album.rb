@@ -10,7 +10,34 @@ def initialize(options)
   @genre = options['genere']
 end
 
+def save()
+  sql = "INSERT INTO albums (artist_id, title, genre)
+  VALUES ($1, $2, $3)
+  RETURNING id"
+  values = [@artist_id, @title, @genre]
+  albums_list = SqlRunner.run(sql, values)
+  @id = albums_list[0]["id"].to_i
+end
 
+
+
+
+
+# def save()
+#    sql = "INSERT INTO pizza_orders
+#    (
+#      customer_id,
+#      topping,
+#      quantity
+#    ) VALUES
+#    (
+#      $1, $2, $3
+#    )
+#    RETURNING id"
+#    values = [@customer_id, @topping, @quantity]
+#    pizza_orders = SqlRunner.run(sql,values)
+#    @id = pizza_orders[0]["id"].to_i
+#  end
 
 
 end  #end of class
