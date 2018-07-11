@@ -15,6 +15,7 @@ album2 = Album.new('title' => 'Moira Sings', 'genre' => 'swing')
 album2.save()
 
 album2.delete()
+artist2.delete()
 
 p Artist.all()
 
