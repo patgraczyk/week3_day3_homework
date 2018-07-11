@@ -21,7 +21,11 @@ def save()
   @id = albums_list[0]["id"].to_i
 end
 
-
+def self.all()
+  sql = "SELECT * FROM albums"
+  albums = SqlRunner.run(sql)
+  return albums.map { |albums_hash| Album.new(albums_hash) }
+end
 
 
 

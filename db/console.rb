@@ -13,3 +13,5 @@ album1 = Album.new('title' => 'Wendy Sings', 'genre' => 'rock')
 album1.save()
 
 p Artist.all()
+
+p Album.all()
