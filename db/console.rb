@@ -17,3 +17,7 @@ album2.save()
 p Artist.all()
 
 p Album.all()
+
+
+artist1.name = 'Moira Banks'
+artist1.update()
